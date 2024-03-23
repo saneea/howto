@@ -37,3 +37,29 @@ update-alternatives --config <общее-имя>
 ```sh
 update-alternatives --get-selections
 ```
+
+## Добавление/Удаление альтернативы
+
+Добавление
+
+```sh
+update-alternatives --install <сим-линк-для-пользователя> <общее-имя> <путь-к-альтернативе> <приоритет>
+```
+
+Удаление
+
+```sh
+update-alternatives --remove <общее-имя> <путь-к-альтернативе>
+```
+
+Например, добавим альтернативный текстовый редактор
+
+```sh
+update-alternatives --install /usr/bin/editor editor /usr/bin/some-new-editor 300
+```
+
+А теперь удалим его
+
+```sh
+update-alternatives --remove editor /usr/bin/some-new-editor
+```
