@@ -32,3 +32,14 @@ git difftool --tool-help
 ```sh
 git config --global diff.tool kdiff3
 ```
+
+## Бэкап репозитория
+
+1. Клонировать репозиторий с параметром `--bare`
+   ```shell
+   git clone --bare <удалённый-репозиторий>
+    ```
+2. По необходимости забирать изменения в ветках и сами новые ветки
+   ```shell
+   git fetch origin *:*
+    ```
