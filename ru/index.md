@@ -7,3 +7,4 @@
 - [update-alternatives](update-alternatives.md)
 - [Файловые системы](fs.md)
 - [Ubuntu Desktop](ubuntu-desktop.md)
+- [cron](cron.md)
