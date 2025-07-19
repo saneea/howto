@@ -36,6 +36,14 @@ git difftool --tool-help
 git config --global diff.tool kdiff3
 ```
 
+## Коммит
+
+### Указываем в параметре дату коммита
+
+```sh
+git commit --date '2025-07-16T01:03:39'
+```
+
 ## Полезные команды
 
 ### Удаление ветки на сервере
