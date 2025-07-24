@@ -6,5 +6,6 @@
 - [ssh](ssh.md)
 - [update-alternatives](update-alternatives.md)
 - [Файловые системы](fs.md)
+- [Ubuntu](ubuntu.md)
 - [Ubuntu Desktop](ubuntu-desktop.md)
 - [cron](cron.md)
