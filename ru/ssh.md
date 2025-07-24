@@ -138,16 +138,23 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub
 ```
 
-или
+которая выведет примерно такое
+
+```
+256 SHA256:<some-hex-SHA256-value> root@jammy (ED25519)
+```
+
+Если нужен отпечаток на rsa ключ, то его можно достать так
 
 ```sh
 ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub
 ```
 
-которая выведет примерно такое
+Добавив флаг `-E md5` можно получить отпечаток хешированный не SHA256, а MD5
+(актуально для старых систем)
 
-```
-256 SHA256:<some-hex-SHA256-value> root@jammy (ED25519)
+```sh
+ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub -E md5
 ```
 
 ## Примеры
