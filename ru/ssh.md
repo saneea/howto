@@ -117,6 +117,39 @@ ssh-keygen -F <сервер>
 ssh-keygen -R <сервер>
 ```
 
+## Другое
+
+### Проверить отпечаток сервера (fingerprint)
+
+При первом ssh-коннекте к хосту можно увидеть сообщение вроде такого
+
+```
+The authenticity of host '<your host>' can't be established.
+ED25519 key fingerprint is SHA256:<some-hex-SHA256-value>.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+
+Это защита от атаки MITM. Чтобы проверить отпечаток ключа хоста сервера
+нужно чтобы уже был доступ к этому хосту.
+Соответственно на сервере нужно выполнить команду
+
+```sh
+ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub
+```
+
+или
+
+```sh
+ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub
+```
+
+которая выведет примерно такое
+
+```
+256 SHA256:<some-hex-SHA256-value> root@jammy (ED25519)
+```
+
 ## Примеры
 
 ### Реверсивный прокси
