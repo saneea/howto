@@ -27,3 +27,17 @@ usermod -aG <имя-группы> <имя-пользователя>
 ```sh
 usermod -aG sudo <имя-пользователя>
 ```
+
+## Дата/Время
+
+### Проверить текущую конфигурацию
+
+```sh
+timedatectl
+```
+
+### Установить часовой пояс
+
+```sh
+timedatectl set-timezone Europe/Moscow
+```
